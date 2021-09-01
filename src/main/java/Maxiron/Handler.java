@@ -53,7 +53,8 @@ public class Handler implements Listener {
     void  PlayerChangedWorldEvent(PlayerChangedWorldEvent event) {
         String worldName;
         Player p = event.getPlayer();
-        String s = p.getDisplayName();
+        String s = p.getName();
+        String cs = p.getDisplayName();
         World w = p.getWorld();
         String n = w.getName();
         switch (n) {
@@ -73,7 +74,7 @@ public class Handler implements Listener {
                 p.setDisplayName("§5" + s);
             }
         }
-        Bukkit.broadcastMessage("§e" + s + " перешёл в: " + n);
+        Bukkit.broadcastMessage(cs + "§e перешёл в: " + n);
     }
 
 
