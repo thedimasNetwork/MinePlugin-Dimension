@@ -1,30 +1,25 @@
 package Maxiron;
 
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.World;
 import org.bukkit.entity.Player;
 import org.bukkit.event.*;
 import org.bukkit.event.player.*;
-import org.bukkit.scoreboard.Scoreboard;
-import org.bukkit.scoreboard.ScoreboardManager;
-import org.bukkit.scoreboard.Team;
-
-import java.io.ObjectInputFilter;
-import java.util.Objects;
 
 @SuppressWarnings("unused")
 public class Handler implements Listener {
 
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
-        FLoat tps = Math.round(Lag.getTPS())
+        /* Double a = Lag.getTPS()*10;
+        Long b = Math.round(a);
+        Double tps = a;*/
         String c;
         Player p = event.getPlayer();
         String s = p.getName();
         World w = p.getWorld();
         String n = w.getName();
-        if (Lag.getTPS() >= 15){
+        /*if (Lag.getTPS() >= 15){
             c = "§a";
         }
         else if (15 > tps && 10 <= tps){
@@ -36,20 +31,21 @@ public class Handler implements Listener {
         else {
             c = "§0";
         }
-        p.setPlayerListFooter("§atps: "+c+tps);
+        p.setPlayerListFooter("§atps: "+c+tps);*/
         p.setPlayerListHeader("play2.thedimas.pp.ua");
-        if (n.equals("world")){
-            p.setPlayerListName("§a"+s);
-            p.setDisplayname("§a"+s)
-            return;
-        }
-        else if (n.equals("world_nether")){
-            p.setPlayerListName("§4"+s);
-            return;
-        }
-        else if (n.equals("world_the_end")) {
-            p.setPlayerListName("§5"+s);
-            return;
+        switch (n) {
+            case "world" -> {
+                p.setPlayerListName("§a" + s);
+                p.setDisplayName("§a" + s);
+            }
+            case "world_nether" -> {
+                p.setPlayerListName("§4" + s);
+                p.setDisplayName("§4" + s);
+            }
+            case "world_the_end" -> {
+                p.setPlayerListName("§5" + s);
+                p.setDisplayName("§5" + s);
+            }
         }
     }
 
@@ -60,17 +56,22 @@ public class Handler implements Listener {
         String s = p.getDisplayName();
         World w = p.getWorld();
         String n = w.getName();
-        if (n.equals("world")){
-            n = "§aверхний мир";
-            p.setPlayerListName("§a"+s);
-        }
-        else if (n.equals("world_nether")){
-            n = "§4незер";
-            p.setPlayerListName("§4"+s);
-        }
-        else if (n.equals("world_the_end")) {
-            n = "§5край";
-            p.setPlayerListName("§5"+s);
+        switch (n) {
+            case "world" -> {
+                n = "§aверхний мир";
+                p.setPlayerListName("§a" + s);
+                p.setDisplayName("§a" + s);
+            }
+            case "world_nether" -> {
+                n = "§4незер";
+                p.setPlayerListName("§4" + s);
+                p.setDisplayName("§4" + s);
+            }
+            case "world_the_end" -> {
+                n = "§5край";
+                p.setPlayerListName("§5" + s);
+                p.setDisplayName("§5" + s);
+            }
         }
         Bukkit.broadcastMessage("§e" + s + " перешёл в: " + n);
     }
