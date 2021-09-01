@@ -1,0 +1,5 @@
+name: MinePlugin-Dimension
+version: 1.3
+main: Maxiron.Plugin
+api-version: '1.16'
+author: Maxiron794
