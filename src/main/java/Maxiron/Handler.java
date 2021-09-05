@@ -35,16 +35,16 @@ public class Handler implements Listener {
         p.setPlayerListHeader("play2.thedimas.pp.ua");
         switch (n) {
             case "world" -> {
-                p.setPlayerListName("§a" + s);
-                p.setDisplayName("§a" + s);
+                p.setPlayerListName("§a" + s + "§r");
+                p.setDisplayName("§a" + s + "§r");
             }
             case "world_nether" -> {
-                p.setPlayerListName("§4" + s);
-                p.setDisplayName("§4" + s);
+                p.setPlayerListName("§4" + s + "§r");
+                p.setDisplayName("§4" + s + "§r");
             }
             case "world_the_end" -> {
-                p.setPlayerListName("§5" + s);
-                p.setDisplayName("§5" + s);
+                p.setPlayerListName("§5" + s + "§r");
+                p.setDisplayName("§5" + s + "§r");
             }
         }
     }
@@ -59,17 +59,17 @@ public class Handler implements Listener {
         String n = w.getName();
         switch (n) {
             case "world" -> {
-                n = "§aверхний мир";
+                n = "§aВерхний мир";
                 p.setPlayerListName("§a" + s);
                 p.setDisplayName("§a" + s);
             }
             case "world_nether" -> {
-                n = "§4незер";
+                n = "§4Незер";
                 p.setPlayerListName("§4" + s);
                 p.setDisplayName("§4" + s);
             }
             case "world_the_end" -> {
-                n = "§5край";
+                n = "§5Край";
                 p.setPlayerListName("§5" + s);
                 p.setDisplayName("§5" + s);
             }
