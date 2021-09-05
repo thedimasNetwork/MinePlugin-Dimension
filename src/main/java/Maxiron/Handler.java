@@ -35,16 +35,13 @@ public class Handler implements Listener {
         p.setPlayerListHeader("play2.thedimas.pp.ua");
         switch (n) {
             case "world" -> {
-                p.setPlayerListName("§a" + s);
-                p.setDisplayName("§a" + s);
+                p.setDisplayName("§a" + s + "§f");
             }
             case "world_nether" -> {
-                p.setPlayerListName("§4" + s);
-                p.setDisplayName("§4" + s);
+                p.setDisplayName("§4" + s + "§f");
             }
             case "world_the_end" -> {
-                p.setPlayerListName("§5" + s);
-                p.setDisplayName("§5" + s);
+                p.setDisplayName("§5" + s + "§f");
             }
         }
     }
@@ -60,18 +57,15 @@ public class Handler implements Listener {
         switch (n) {
             case "world" -> {
                 n = "§aверхний мир";
-                p.setPlayerListName("§a" + s);
-                p.setDisplayName("§a" + s);
+                p.setDisplayName("§a" + s + "§f");
             }
             case "world_nether" -> {
                 n = "§4незер";
-                p.setPlayerListName("§4" + s);
-                p.setDisplayName("§4" + s);
+                p.setDisplayName("§4" + s + "§f");
             }
             case "world_the_end" -> {
                 n = "§5край";
-                p.setPlayerListName("§5" + s);
-                p.setDisplayName("§5" + s);
+                p.setDisplayName("§5" + s + "§f");
             }
         }
         Bukkit.broadcastMessage(cs + "§e перешёл в: " + n);
