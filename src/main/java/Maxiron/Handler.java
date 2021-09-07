@@ -56,16 +56,19 @@ public class Handler implements Listener {
         String n = w.getName();
         switch (n) {
             case "world" -> {
-                n = "§aверхний мир";
-                p.setDisplayName("§a" + s + "§f");
+                n = "§aВерхний мир";
+                p.setPlayerListName("§a" + s + "§r");
+                p.setDisplayName("§a" + s + "§r");
             }
             case "world_nether" -> {
-                n = "§4незер";
-                p.setDisplayName("§4" + s + "§f");
+                n = "§4Незер";
+                p.setPlayerListName("§4" + s + "§r");
+                p.setDisplayName("§4" + s + "§r");
             }
             case "world_the_end" -> {
-                n = "§5край";
-                p.setDisplayName("§5" + s + "§f");
+                n = "§5Край";
+                p.setPlayerListName("§5" + s + "§r");
+                p.setDisplayName("§5" + s + "§r");
             }
         }
         Bukkit.broadcastMessage(cs + "§e перешёл в: " + n);
