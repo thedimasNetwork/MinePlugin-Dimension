@@ -32,16 +32,19 @@ public class Handler implements Listener {
             c = "§0";
         }
         p.setPlayerListFooter("§atps: "+c+tps);*/
-        p.setPlayerListHeader("play2.thedimas.pp.ua");
+        p.setPlayerListHeader("§5play2.thedimas.pp.ua");
         switch (n) {
             case "world" -> {
-                p.setDisplayName("§a" + s + "§f");
+                p.setPlayerListName("§a" + s + "§r");
+                p.setDisplayName("§a" + s + "§r");
             }
             case "world_nether" -> {
-                p.setDisplayName("§4" + s + "§f");
+                p.setPlayerListName("§4" + s + "§r");
+                p.setDisplayName("§4" + s + "§r");
             }
             case "world_the_end" -> {
-                p.setDisplayName("§5" + s + "§f");
+                p.setPlayerListName("§5" + s + "§r");
+                p.setDisplayName("§5" + s + "§r");
             }
         }
     }
